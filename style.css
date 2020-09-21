@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial;
+    perspective: 800px;
+}
+
+#controls {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: darkgray;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+#controls h1 {
+	margin: 30px auto;
+	text-align: center;
+	color: red;
+	font-size: 40px;
+	font-weight: bold;
+	border:  5px solid black
+}
+
+#controls span  {
+    background-color: coral;
+    padding: 10px;
+    font-size: 24px;
+    color: aliceblue;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #333;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+#controls span:hover {
+    background-color: aliceblue;
+    color: coral
+}
+
+#info {
+    width: 1100px;
+    padding: 20px;
+    margin: 20px auto 0;
+    border: 2px solid #2196f3;
+    border-radius: 20px;
+    background-color: slategray;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    overflow: hidden
+}
+
+#info #name {
+    float: left;
+    width: 45%;
+}
+
+#info #timer {
+    float: left;
+    width: 10%;
+    color: aliceblue;
+    background-color: brown;
+    padding: 10px;
+    margin: 1px 0;
+    text-align: center;
+    border: 1px solid #2196f3;
+    border-radius: 10px;
+}
+
+#info #tries {
+    float: right;
+    width: 45%;
+    text-align: right
+}
+
+#show {
+    font-size: 24px;
+    background-color: coral;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #2196f3;
+    border-radius: 20px;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+
+#show:hover {
+    background-color: #fff;
+    color: chocolate;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 1100px;
+}
+
+.container.no-click {
+    pointer-events: none;
+}
+
+.container .box {
+    flex: 1 0 200px;
+    margin: 0 10px 20px;
+    height: 200px;
+    position: relative;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+	box-shadow: 4px 4px 4px #ccc;
+	user-select: none
+}
+
+.container .box.flipped,
+.container .box.matched {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.container .box.start-flip {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.container .box .front {
+    background-color: #333;
+    line-height: 200px;
+
+}
+
+.container .box .front:before {
+    content: '?';
+    font-size: 140px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.container .box .back {
+    background-color: #607D8B;
+    transform: rotateY(180deg);
+}
+
+.container .box .back img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .box .face {
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 5px solid #2196F3;
+    text-align: center
+}
+
+footer {
+	margin: 20px auto;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: brown;
+	padding: 5px
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+footer p span {
+    background-color: black;
+    padding: 2px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.run-out, .winner {
+    display: none;
+}
+
+.run-out.splash2, .winner.splash1 {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: darkgray;
+    opacity: .9;
+    z-index: 2;
+}
+
+
+.run-out span.replay, 
+.run-out button.replay,
+.winner span.replay,
+.winner button.replay {
+    display: block;
+    background-color: coral;
+    padding: 10px;
+    font-size: 24px;
+    color: aliceblue;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #333;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    outline: none;
+}
+
+.run-out span.replay:before {
+    content: 'Time Runs Out !! you Lose'
+}
+
+.winner span.replay:before {
+    content: 'You are Winner , Congratulations'
+}
+
+.run-out button.replay, .winner button.replay {
+    margin-top: 100px;
+    cursor: pointer
+}
+
+.run-out button.replay:hover {
+    background-color: aliceblue;
+    color: brown
+}
+
+.winner span.replay, .winner button.replay {
+    background-color: darkgreen;
+    color: #fff;
+}
+
+.winner button.replay:hover {
+    background-color: #fff;
+    color: darkgreen;
+}
+
+/*responsive*/
+
+@media (min-width: 100px) and (max-width: 1100px) {
+    #controls,
+    .run-out.splash2,
+    .winner.splash1 {
+        width: 400%
+    };
+}
+
+@media (min-width: 100px) and (max-width: 1000px) {
+    #show {
+         transform: translate(180%, 20%)
+    };
+}
+
+@media (min-width: 100px) and (max-width: 1000px) {
+    footer {
+         transform: translate(100%, 20%)
+    };
+}

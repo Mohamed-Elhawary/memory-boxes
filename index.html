@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+
+    <!--very important meta tag for launching @media query in all devices with their actual width--> 
+    <meta id="viewport" name="viewport" content ="width=device-width" />
+    <title>Memory Boxes | Smart your Focus</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+        <div id="controls">
+           <h1>Welcome to Memory Boxes</h1>
+            <span id="span">Start Game</span>
+        </div>
+
+
+        <div id="info">
+            <div id="name">
+                Hello: <span></span>
+            </div>
+            
+            <div id="timer"></div>
+            
+            <div id="tries">
+                Wrong Tries: <span>0</span>
+            </div>
+        </div>
+        
+        <button id="show">Show the Boxes</button>
+        
+ 		<div class="container">
+
+                <div class="box" data-img='imga'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/1.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imga'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/1.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgb'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/2.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgb'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/2.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgc'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/3.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgc'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/3.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgd'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/4.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgd'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/4.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imge'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/5.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imge'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/5.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgf'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/6.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgf'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/6.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgg'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/7.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgg'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/7.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgh'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/8.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgh'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/8.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgi'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/9.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgi'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/9.png">
+                    </div>
+                </div>
+
+
+                <div class="box" data-img='imgj'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/10.png">
+                    </div>
+                </div>
+                <div class="box" data-img='imgj'>
+                    <div class="front face"></div>
+                    <div class="back face">
+                        <img src="images/10.png">
+                    </div>
+                </div>
+
+            </div>
+            
+ 			<footer>
+       			<span>&#64; All Copyrights are reserved 2020</span>
+       			<p>Developed by _ <span>HaWaRy</span>_</p>
+			</footer>
+        
+        	<div class="run-out">
+            	<span></span>
+            	<button>Re-Try?</button>
+        	</div>
+        
+        	<div class="winner">
+            	<span></span>
+           	 <button>Play Again</button>
+        	</div>
+
+        	<audio src="audios/success.wav" id="success"></audio>
+        	<audio src="audios/fail.mp3" id="fail"></audio>
+        	<audio src="audios/winner.mp3" id="congratulation"></audio>
+        	<audio src="audios/lose.wav" id="lose"></audio>
+	
+      
+       
+			<script src="script.js"></script>
+	</body>
+</html>
