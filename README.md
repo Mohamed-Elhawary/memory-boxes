@@ -1,7 +1,8 @@
 # memory-boxes  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/86d83fec-0c14-40de-8dd4-d62e12a770fc/deploy-status)](https://app.netlify.com/sites/memoryboxes/deploys)  
 
-Memory Boxes is a memory game application depends on how you can match every two similar boxes together before time is gone out. 
+Memory Boxes is a memory game app that depends on how you can match every two similar boxes together before time is gone out.
+
 ![Screenshot](preview_1.png)
 
 ## Demo and How to Interact  
