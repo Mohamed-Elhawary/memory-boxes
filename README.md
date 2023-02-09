@@ -18,7 +18,6 @@ You can view the App from [here](https://memoryboxes.netlify.app/)
 * CSS3
 * Vanilla JS
 
-
 ## Author
 
 * [Mohamed Elhawary](https://www.linkedin.com/in/mohamed-elhawary14/) 
